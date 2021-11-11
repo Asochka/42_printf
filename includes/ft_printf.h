@@ -5,18 +5,18 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-typedef struct s_print                       
-{                        
-      va_list  args;    # arg to print out                    
-    //   int   wdt;        # width                
-    //   int   prc;        # precision              
-    //   int   zero;       # zero padding               
-    //   int   pnt;        # .     
-    //   int   dash;       # -               
-		int   tl;         # total_length (return value)              
-    //   int   sign;       # pos or neg number               
-    //   int   is_zero;    # is number zero                 
-    //   int   perc;       # %               
-    //   int   sp;         # space flag ' '            
+typedef struct s_print
+{
+	va_list  args;
+    //   int   wdt;
+    //   int   prc;
+    //   int   zero;
+    //   int   pnt;
+    //   int   dash;
+	int   tl;
+    //   int   sign;
+    //   int   is_zero;
+    //   int   perc;
+    //   int   sp;
 }    t_print;
 #endif
