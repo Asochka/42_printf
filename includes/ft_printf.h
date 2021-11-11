@@ -1,3 +1,10 @@
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdarg.h>
+
 typedef struct s_print                       
 {                        
       va_list  args;    # arg to print out                    
@@ -12,3 +19,4 @@ typedef struct s_print
     //   int   perc;       # %               
     //   int   sp;         # space flag ' '            
 }    t_print;
+#endif
