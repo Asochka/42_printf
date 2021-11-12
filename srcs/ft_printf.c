@@ -1,19 +1,16 @@
-#include "../includes/ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: smana <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/12 17:35:54 by smana             #+#    #+#             */
+/*   Updated: 2021/11/12 17:35:56 by smana            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// t_print	*ft_initialise_tab(t_print *tab)
-// {
-// 	tab->wdt = 0;
-// 	tab->prc = 0;
-// 	tab->zero = 0;
-// 	tab->pnt = 0;
-// 	tab->sign = 0;
-// 	tab->tl = 0;
-// 	tab->is_zero = 0;
-// 	tab->dash = 0;
-// 	tab->perc = 0;
-// 	tab->sp = 0;
-// 	return (tab);
-// }
+#include "../includes/ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -24,7 +21,6 @@ int	ft_printf(const char *format, ...)
 	tab = (t_print *)malloc(sizeof(t_print));
 	if (!tab)
 		return (-1);
-	//ft_initialise_tab(tab)
 	va_start(tab->args, format);
 	i = -1;
 	ret = 0;
@@ -41,15 +37,4 @@ int	ft_printf(const char *format, ...)
 	va_end(tab->args);
 	free (tab);
 	return (ret);
-}
-
-int main()
-{
-	int k;
-	int o = 98;
-
-	k = printf("12345%% %d %c %s %p %u %x %X\n", 10, 'a', "kkk", &o, 2147483647, 16, 16);
-	printf("%d\n", k);
-	k = ft_printf("12345%% %d %c %s %p %u %x %X\n", 10, 'a', "kkk", &o, 2147483647, 16, 16);
-	printf("%d\n", k);
 }

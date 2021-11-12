@@ -5,21 +5,9 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-#include <stdio.h> //deleteeeee
-
 typedef struct s_print
 {
 	va_list	args;
-	// int		wdt;
-	// int		prc;
-	// int		zero;
-	// int		pnt;
-	// int		dash;
-	// int		tl;
-	// int		sign;
-	// int		is_zero;
-	// int		perc;
-	// int		sp;
 }	t_print;
 
 int		ft_printf(const char *format, ...);
