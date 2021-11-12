@@ -1,4 +1,4 @@
-NAME = printf_lib.a
+NAME = libftprintf.a
 
 CC = gcc
 
@@ -12,6 +12,7 @@ SRCS =	./srcs/ft_eval_format.c \
 		./srcs/ft_print_upphex.c \
 		./srcs/ft_print_point.c \
 		./srcs/ft_print_str.c \
+		./srcs/ft_print_int.c \
 		./srcs/ft_print_unint.c \
 		./srcs/ft_printf.c \
 		./srcs/ft_putnbr.c \

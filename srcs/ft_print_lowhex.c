@@ -34,7 +34,7 @@ int	ft_to_hexlow(unsigned int	a)
 
 	base = "0123456789abcdef";
 	i = ft_len_in_hex_low(a);
-	ret = ft_len_in_hex_low(a);
+	ret = i;
 	k = (char *)malloc((i + 1) * sizeof(char));
 	k[i] = '\0';
 	while (a > 0)
@@ -42,11 +42,8 @@ int	ft_to_hexlow(unsigned int	a)
 		k[--i] = base[a % 16];
 		a = a / 16;
 	}
-	while (*k)
-	{
-		write(1, k, 1);
-		k++;
-	}
+	write(1, k, ret);
+	free (k);
 	return (ret);
 }
 
