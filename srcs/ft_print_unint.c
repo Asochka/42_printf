@@ -2,11 +2,11 @@
 
 int	ft_print_unint(t_print *tab)
 {
-	char	a;
-	int		ret;
+	unsigned int	a;
+	int				ret;
 
 	ret = 0;
-	a = va_arg(tab->args, int);
-	ret += write(1, &a, 1);
+	a = va_arg(tab->args, unsigned int);
+	ft_putnbr_un(a, &ret);
 	return (ret);
 }

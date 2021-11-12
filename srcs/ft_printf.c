@@ -1,19 +1,19 @@
 #include "../includes/ft_printf.h"
 
-t_print	*ft_initialise_tab(t_print *tab)
-{
-    //   tab->wdt = 0;
-    //   tab->prc = 0;
-    //   tab->zero = 0;
-    //   tab->pnt = 0;
-    //   tab->sign = 0;
-	tab->tl = 0;                        
-    //   tab->is_zero = 0;                        
-    //   tab->dash = 0;                        
-    //   tab->perc = 0;                        
-    //   tab->sp = 0;                        
-	return (tab);                       
-}
+// t_print	*ft_initialise_tab(t_print *tab)
+// {
+// 	tab->wdt = 0;
+// 	tab->prc = 0;
+// 	tab->zero = 0;
+// 	tab->pnt = 0;
+// 	tab->sign = 0;
+// 	tab->tl = 0;
+// 	tab->is_zero = 0;
+// 	tab->dash = 0;
+// 	tab->perc = 0;
+// 	tab->sp = 0;
+// 	return (tab);
+// }
 
 int	ft_printf(const char *format, ...)
 {
@@ -43,13 +43,13 @@ int	ft_printf(const char *format, ...)
 	return (ret);
 }
 
-#include <stdio.h>
-
 int main()
 {
-	int	k;
-	k = printf("asd%s\n", "qwer");
+	int k;
+	void *ptr;
+
+	k = printf("12345%% %d %c %s %p %u\n", 10, 'a', "kkk", ptr, 2147483647);
 	printf("%d\n", k);
-	k = ft_printf("asd%s\n", "qwer");
-	printf("%d", k);
+	k = ft_printf("12345%% %d %c %s %p %u\n", 10, 'a', "kkk", ptr, 2147483647);
+	printf("%d\n", k);
 }
