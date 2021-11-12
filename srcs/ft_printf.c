@@ -46,10 +46,10 @@ int	ft_printf(const char *format, ...)
 int main()
 {
 	int k;
-	void *ptr;
+	int o = 98;
 
-	k = printf("12345%% %d %c %s %p %u %x %X\n", 10, 'a', "kkk", ptr, 2147483647, 16, 16);
+	k = printf("12345%% %d %c %s %p %u %x %X\n", 10, 'a', "kkk", &o, 2147483647, 16, 16);
 	printf("%d\n", k);
-	k = ft_printf("12345%% %d %c %s %p %u %x %X\n", 10, 'a', "kkk", ptr, 2147483647, 16, 16);
+	k = ft_printf("12345%% %d %c %s %p %u %x %X\n", 10, 'a', "kkk", &o, 2147483647, 16, 16);
 	printf("%d\n", k);
 }
