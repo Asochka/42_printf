@@ -48,8 +48,8 @@ int main()
 	int k;
 	void *ptr;
 
-	k = printf("12345%% %d %c %s %p %u\n", 10, 'a', "kkk", ptr, 2147483647);
+	k = printf("12345%% %d %c %s %p %u %x %X\n", 10, 'a', "kkk", ptr, 2147483647, 16, 16);
 	printf("%d\n", k);
-	k = ft_printf("12345%% %d %c %s %p %u\n", 10, 'a', "kkk", ptr, 2147483647);
+	k = ft_printf("12345%% %d %c %s %p %u %x %X\n", 10, 'a', "kkk", ptr, 2147483647, 16, 16);
 	printf("%d\n", k);
 }

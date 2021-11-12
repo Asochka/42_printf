@@ -15,10 +15,10 @@ int	ft_eval_format(t_print *tab, const char *format, int i)
 		ret = ft_print_point(tab);
 	if (format[i] == 'u')
 		ret = ft_print_unint(tab);
-	// if (format[i] == 'x')
-	// 	ret = ft_print_lowhex(tab);
-	// if (format[i] == 'X')
-	// 	ret = ft_print_upphex(tab);
+	if (format[i] == 'x')
+		ret = ft_print_lowhex(tab);
+	if (format[i] == 'X')
+		ret = ft_print_upphex(tab);
 	if (format[i] == '%')
 		ret = write(1, "%", 1);
 	return (ret);
