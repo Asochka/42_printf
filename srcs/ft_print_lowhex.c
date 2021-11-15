@@ -54,6 +54,9 @@ int	ft_print_lowhex(t_print *tab)
 
 	ret = 0;
 	a = va_arg(tab->args, unsigned int);
-	ret = ft_to_hexlow(a);
+	if (a == 0)
+		ret += write(1, "0", 1);
+	else
+		ret = ft_to_hexlow(a);
 	return (ret);
 }

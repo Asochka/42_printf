@@ -55,6 +55,9 @@ int	ft_print_point(t_print *tab)
 	ret = 0;
 	a = (unsigned long)va_arg(tab->args, void *);
 	write(1, "0x", 2);
-	ret = ft_to_hex(a);
+	if (a == 0)
+		ret += write(1, "0", 1);
+	else
+		ret = ft_to_hex(a);
 	return (ret + 2);
 }

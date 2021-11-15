@@ -18,7 +18,10 @@ int	ft_putstr(char *s)
 
 	ret = 0;
 	if (!s)
-		return (0);
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (*s)
 	{
 		write(1, s, 1);
