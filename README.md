@@ -1,22 +1,20 @@
-# get_next_line (42 project)
-
-This project is to create function that will return new line from given file descriptor.
-It was forbidden to use "libft" on this project, so file get_next_line_utils includes some functions from it.
-This function returns new line or "NULL" if it is EOF or mistake occured. \
-\
-It should be compiled with define flag **-D BUFFER_SIZE='value'** in order to create size of buffer that will be read in from file
-
-## Description
-For example we have file: \
-1 Hello \
-2 World \
-3 ! 
-
-First call will return "Hello" \
-Second - "world" \
-Third - "!" \
-Fourth and others "(null)" 
-
-## Bonus (files with postfix _bonus)
-There is one static variable (**DONE**) \
-It can read from different file descriptors (**NOT ALL VALUES OF FILE DESCRIPTOR WERE TOOK INTO ACCONUT**)
+# ft_printf (42 project)
+## Summary to this project
+This project is pretty straight forward. You will recode printf. Fortunetaly \
+you will be able to reuse it in future projects as a legit function of your libft. You will \
+mainly learn how to use variadic arguments.
+## What it do
+This project prototype libc printf. It only manages some conversion without any flags.
+### Conversions
+• %c print a single character. \
+• %s print a string of characters. \
+• %p The void * pointer argument is printed in hexadecimal. \
+• %d print a decimal (base 10) number. \
+• %i print an integer in base 10. \
+• %u print an unsigned decimal (base 10) number. \
+• %x print a number in hexadecimal (base 16), with lowercase. \
+• %X print a number in hexadecimal (base 16), with uppercase. \
+• %% print a percent sign.
+## How it works
+Run `make` to bulid library that contained **ft_printf** \
+You should run this library to use function
